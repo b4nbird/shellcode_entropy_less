@@ -1,0 +1,10 @@
+﻿  replace.cpp
+C:\Users\Hui\Desktop\winAPI\shellcodeReplace\shellcodeReplace\replace.cpp(14,39): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Hui\Desktop\winAPI\shellcodeReplace\shellcodeReplace\replace.cpp(14,39): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+  shellcodeLoader.cpp
+  transfer.cpp
+  undoReplace.cpp
+C:\Users\Hui\Desktop\winAPI\shellcodeReplace\shellcodeReplace\undoReplace.cpp(45,45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Hui\Desktop\winAPI\shellcodeReplace\shellcodeReplace\undoReplace.cpp(45,45): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+  正在生成代码...
+  shellcodeReplace.vcxproj -> C:\Users\Hui\Desktop\winAPI\shellcodeReplace\x64\Debug\shellcodeReplace.exe
