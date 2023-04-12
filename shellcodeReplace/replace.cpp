@@ -15,6 +15,6 @@ void replaceShellcode() {
     vector<char> data(StrData.length() + 1);
     strToVector(StrData, data);
     string encrypted = replaceVector(data);
-    cout << "¼ÓÃÜµÄ½á¹ûÎª£º" << endl;
+    cout << "encrypt succesï¼š" << endl;
     cout << encrypted << endl;
 }
