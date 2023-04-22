@@ -13,8 +13,13 @@ replace shellcode characters to words so that reduce the entopy
 'w' -----> "water"        'x' -----> "xigua"        'y' -----> "yes"             'z' -----> "zen"
 ```
 # Usage:
-copy your shellcode to replace.cpp, get the replaced result , copy it to shellcodeloader.cpp and feel free to change the shellcodeloader
+copy your shellcode to replace.cpp, get the replaced result
+![图片](https://user-images.githubusercontent.com/63333153/233763202-3b044d62-d332-406c-b748-ce6846fd4a01.png)
 
+copy it to shellcodeloader.cpp and feel free to change the shellcodeloader
+![图片](https://user-images.githubusercontent.com/63333153/233763217-64383ade-71cd-4a4e-8999-c3274ef4a57f.png)
+
+# Result:
 ![image](https://user-images.githubusercontent.com/63333153/231361111-245f8799-a33b-4f07-8292-e09ae034ef40.png)
 
 ![图片](https://user-images.githubusercontent.com/63333153/231187346-cfde9c1b-2c2a-452c-814c-ebce4b2a8a6e.png)
